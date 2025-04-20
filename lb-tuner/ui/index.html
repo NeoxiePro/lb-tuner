@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Performance APP</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="colors.css" />
+        <!-- <link rel="stylesheet" href="frame.css" /> -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="tuner.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <div id="phone-wrapper">
+            <div class="app" id="content">
+                <div class="app-wrapper">
+                        <div class="tuner-app">
+                            <div class="tuner-app-header">
+                                <img src="assets/RSL.png" class="tuner-header-image">
+                            </div>
+                            <div class="tuner-homescreen">
+                                <div class="tuner-cardetails">
+                                    <div id="tuner-rating" class="tuner-detail-rating"><span class="tuner-answer"></span></div>
+                                    <div>
+                                        <div id="tuner-accel" class="tuner-detail-box"><span class="tuner-detail">Acceleration</span><span class="tuner-answer"></span></div>
+                                        <div id="tuner-speed" class="tuner-detail-box"><span class="tuner-detail">Speed</span><span class="tuner-answer"></span></div>
+                                        <div id="tuner-handling" class="tuner-detail-box"><span class="tuner-detail">Handling</span><span class="tuner-answer"></span></div>
+                                        <div id="tuner-braking" class="tuner-detail-box"><span class="tuner-detail">Braking</span><span class="tuner-answer"></span></div>
+                                        <div id="tuner-drivetrain" class="tuner-detail-box last"><span class="tuner-detail">Drivetrain</span><span class="tuner-answer"></span></div>
+                                    </div>
+                                    <div class="tuner-group">
+                                        <div id="tuner-brand" class="tuner-detail-box"><span class="tuner-detail">Brand</span><span class="tuner-answer"></span></div>
+                                        <div id="tuner-model" class="tuner-detail-box"><span class="tuner-detail">Model</span><span class="tuner-answer"></span></div>
+                                    </div>
+                                    <div id="resposta"  class="tuner-detail-box"><span class="tuner-answer"></span></div>
+                                    <div class="tuner-reload">
+                                        <i class="fas fa-redo"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <script src="tuner.js"></script>
+        <script src="dev.js"></script>
+    </body>
+</html>
