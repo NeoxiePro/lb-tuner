@@ -21,7 +21,7 @@ SetupDetailsTuner = function(data) {
         $("#tuner-handling").find(".tuner-answer").html('');
         $("#tuner-braking").find(".tuner-answer").html('');
         $("#tuner-drivetrain").find(".tuner-answer").html('');
-        $("#resposta").find(".tuner-answer").html('Estás a tentar conduzir o ar? Entra num carro.');
+        $("#resposta").find(".tuner-answer").html('Are you trying to drive air? Get in a car.');
     }
     else {
         $("#resposta").find(".tuner-answer").html('');
