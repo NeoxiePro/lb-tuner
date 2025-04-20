@@ -1,19 +1,17 @@
 local identifier = "lb-tuner"
 
--- Esperar o lb-phone iniciar
 while GetResourceState("lb-phone") ~= "started" do
     Wait(500)
 end
 
--- Função para adicionar a app personalizada ao telemóvel
 local function addApp()
     local added, errorMessage = exports["lb-phone"]:AddCustomApp({
         identifier = identifier,
         name = "RedSuns Tuner",
         description = "Vehicle performance data",
-        developer = "Neoxie Feat Coffeelot",
+        developer = "Neoxie Feat Coffeelot :D",
         defaultApp = false,
-        size = 59812, -- certifica-te que este valor é o correto do conteúdo UI
+        size = 59812,
         ui = GetCurrentResourceName() .. "/ui/index.html",
         icon = "https://cfx-nui-" .. GetCurrentResourceName() .. "/ui/assets/icon.png",
         fixBlur = true,
@@ -26,26 +24,22 @@ local function addApp()
     end
 end
 
--- Chamar a função ao iniciar o resource
 CreateThread(function()
     addApp()
 end)
 
--- Recarregar a app caso o lb-phone reinicie
 AddEventHandler("onResourceStart", function(resource)
     if resource == "lb-phone" then
         addApp()
     end
 end)
 
--- Comando temporário para testes manuais
 RegisterCommand("opentuner", function()
     exports["lb-phone"]:SendCustomAppMessage("lb-tuner", {
         action = "open"
     })
 end)
 
--- Callback da NUI para atualizar info do veículo
 RegisterNUICallback("UpdateVehicle", function(_, cb)
     local vehicle = GetPlayersLastVehicle()
 
