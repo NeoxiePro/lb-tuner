@@ -44,7 +44,7 @@ RegisterNUICallback("UpdateVehicle", function(_, cb)
     local vehicle = GetPlayersLastVehicle()
 
     if DoesEntityExist(vehicle) then
-        local info, class, perfRating = exports["nxg-performance"]:getVehicleInfo(vehicle)
+        local info, class, perfRating = exports["cw-performance"]:getVehicleInfo(vehicle)
         if info then
             local model = GetLabelText(GetDisplayNameFromVehicleModel(GetEntityModel(vehicle)))
             local brand = GetMakeNameFromVehicleModel(GetEntityModel(vehicle))
